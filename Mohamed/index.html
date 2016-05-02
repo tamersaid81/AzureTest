@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .clockStyle {
+            background-color:#000;
+            border:#999 2px inset;
+            padding:6px;
+            color:#0FF;
+            font-family:"Arial Black", Gadget, sans-serif;
+            font-size:16px;
+            font-weight:bold;
+            letter-spacing: 2px;
+            display:inline;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Mohamed Home Page</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="assets/CSS/unsemantic-grid-responsive-tablet.css">
+    <link rel="stylesheet" href="assets/CSS/font-awesome.min.css">
+    <style>
+        .clockStyle {
+            background-color:#000;
+            border:#999 2px inset;
+            padding:6px;
+            color:#0FF;
+            font-family:"Arial Black", Gadget, sans-serif;
+            font-size:16px;
+            font-weight:bold;
+            letter-spacing: 2px;
+            display:inline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div>
+    <img id="websitelogo1" src="assets/images/websitelogo.jpg" alt="Mohamed Logo">
+    <img id="websitelogo2" src="assets/images/robertgordn.png" alt="Mohamed Logo2">
+    </div>
+    <div id="seachbox">
+        <form>
+            <p></p>
+            <input type="text" name="searchfield">
+            <input type="submit" value="Go">
+        </form>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Work.html">Work</a></li>
+            <li><a href="Skills.html">Skills</a></li>
+            <li><a href="Links.html">Links</a></li>
+        </ul>
+    </nav>
+    <img id="banner" src="assets/images/banner.jpg" alt="Servers Site">
+</header>
+<main class="grid-container">
+    <aside class="grid-33">
+        <article>
+            <img id="tamer" src="assets/images/tamer.JPG" alt="Tamer ">
+            <h2>Welcome to my website</h2>
+            <p>I'm currently a student at Robert Gordon University in Scotland. One of my courses this year is Internet
+                Based Programming, my Tutor Dr. Micheal Crabb has asked me to design a specific website about myself.
+                the best idea came to my mind is designing a website about career. it's not long now till I finish my
+                Computer Networking Management and Design degree, therefore a website contain all my CV information is
+                a very good idea for the future and something valuable to be added to my skills as a project throughout
+                my education.</p>
+            <img id="success" src="assets/images/success.jpg" alt="success ">
+            <h5>UK Time:</h5>
+            <div id="clockDisplay" class="clockStyle"></div>
+            <script>
+                function renderTime() {
+                    var currentTime = new Date();
+                    var diem = "AM";
+                    var h = currentTime.getHours();
+                    var m = currentTime.getMinutes();
+                    var s = currentTime.getSeconds();
+                    setTimeout('renderTime()',1000);
+                    if (h == 0) {
+                        h = 12;
+                    } else if (h > 12) {
+                        h = h - 12;
+                        diem="PM";
+                    }
+                    if (h < 10) {
+                        h = "0" + h;
+                    }
+                    if (m < 10) {
+                        m = "0" + m;
+                    }
+                    if (s < 10) {
+                        s = "0" + s;
+                    }
+                    var myClock = document.getElementById('clockDisplay');
+                    myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+                    myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+                }
+                renderTime();
+            </script>
+        </article>
+    </aside>
+    <section class="grid-66">
+        <h3>Career Objectives</h3>
+        <p>Third year BSc (Hons) Computer Network Management and Design experienced in working with configuration and
+            management    of computer networks. Now looking for a new and challenging network engineer placement, one
+            which will make the best use of my existing studies, skills, and experience and also the first step towards
+            my future career.</p>
+        <h3>Education</h3>
+        <h4>BSc Computer Network Management and Design (Present). Robert Gordon University Aberdeen, Scotland.</h4>
+        <h5>Key Modules:</h5>
+        <p>Computing Network Management, Computing Network Design, Programming For System Administrators,
+            Network Protocols and Performance, Group Project.</p>
+        <h4>HND Computer Networking and Internet Technology (2013 - 2015). Dundee and Angus College Dundee, Scotland.</h4>
+        <h5>Key Modules:</h5>
+        <p>Internetworking Technology, Security and Business Concepts, Administering Network Systems,
+            Network Concepts, Network Technology and Data Communications, Routing and Switching Technology, achieved top
+            of the class for graded unit HND.</p>
+        <h4>Bachelor of Commerce (1998 -2002). Zagazig University, Egypt.</h4>
+        <h5>Key Modules:</h5>
+        <p>Assessment: Is considered comparable to British Bachelor degree standard.Key Modules: Cost Accounting,
+            Accounting Systems, Auditing, Managerial Accounting, Taxation Accounting, Operations Research, Economic
+            Development & Planning, Computer, Accounting of Financial Specialized Institutions.</p>
+        <h3>Project</h3>
+        <p>The last graduated project at Dundee College was to design Cisco three-tier network, to replace the current
+            network using Cisco equipment at the lab room. Asked the users what are they looking for, problems in
+            existing network. Researched solutions for a new network.  The final result showed an increase of the
+            network performance by 80% and cut the users waste of time by 60%. Grade A was awarded for this project.</p>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <div class="copyright">
+            &copy; 2016 Tamer Mohamed All Rights Reserved.
+        </div>
+        <div class="downmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Work.html">Work</a></li>
+                <li><a href="Skills.html">Skills</a></li>
+                <li><a href="Links.html">Links</a></li>
+
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
